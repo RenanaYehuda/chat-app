@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Login from "./components/Login/Login";
+import ContactUsers from "./components/ContactUsers/ContactUsers";
+import ChatPage from "./components/ChatPage/ChatPage";
+import { Context } from "./Context";
+import { useContext } from "react";
 
 function App() {
+  const { isConnectedUser } = useContext(Context);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        {isConnectedUser && (
+          <Route path="/contactUsers" element={<ContactUsers />} />
+        )}
+        {isConnectedUser && <Route path="/chat" element={<ChatPage />} />}
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,47 @@
+export const users = [
+    {
+        "userName": "renana",
+        "firstName": "יונתן",
+        "lastName": "כהן",
+        "phone": "555-123-4567",
+        "city": "ניו יורק",
+        "password": "1234",
+        "email": "jsmith001@example.com",
+    },
+    {
+        "userName": "amartinez99",
+        "firstName": "אנה",
+        "lastName": "מרטינז",
+        "phone": "555-234-5678",
+        "city": "לוס אנג'לס",
+        "password": "Sunset@2023",
+        "email": "amartinez99@example.com",
+    },
+    {
+        "userName": "kbrown86",
+        "firstName": "קובי",
+        "lastName": "בראון",
+        "phone": "555-345-6789",
+        "city": "שיקגו",
+        "password": "WindyCity#1",
+        "email": "kbrown86@example.com",
+    },
+    {
+        "userName": "lrodriguez25",
+        "firstName": "לורה",
+        "lastName": "רודריגז",
+        "phone": "555-456-7890",
+        "city": "יוסטון",
+        "password": "Houston$25",
+        "email": "lrodriguez25@example.com",
+    },
+    {
+        "userName": "emorgan77",
+        "firstName": "עדי",
+        "lastName": "מורגן",
+        "phone": "555-567-8901",
+        "city": "מיאמי",
+        "password": "OceanView777",
+        "email": "emorgan77@example.com",
+    }
+];
